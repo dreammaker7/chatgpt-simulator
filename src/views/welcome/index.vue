@@ -1,34 +1,24 @@
+<script setup lang="ts">
+import { NLayout, NCard, NSpace } from "naive-ui";
+</script>
+
 <template>
-  <div id="container">
-    <strong>Welcome to Chatbot Simulator</strong>
-  </div>
+  <n-layout embedded content-style="padding: 24px;">
+    <n-space justify="center" align="center" style="height: 100%">
+      <n-card class="card">
+        <strong>Hi, Welcome to ChatGPT Simulator!</strong>
+      </n-card>
+    </n-space>
+  </n-layout>
 </template>
 
-<script setup lang="ts"></script>
-
 <style scoped>
-#container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.n-layout {
+  height: 100%;
 }
 
-#container strong {
-  font-size: 20px;
+strong {
+  font-size: 18px;
   line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }
 </style>
