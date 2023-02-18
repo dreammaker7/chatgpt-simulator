@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { NLayout, NLayoutHeader, NLayoutContent, NCard, NSpace } from "naive-ui";
-import { Moon, SunnySharp } from "@vicons/ionicons5";
+import { MoonOutline, SunnySharp } from "@vicons/ionicons5";
 import { useThemeStore } from "@/store/app";
 
 const router = useRouter();
@@ -11,10 +11,10 @@ const themeStore = useThemeStore();
 <template>
   <n-layout :native-scrollbar="false" style="height: 100%" embedded>
     <n-layout-header>
-      <n-switch v-model:value="themeStore.darkTheme">
+      <n-switch v-model:value="themeStore.darkTheme" class="theme-switch">
         <template #checked-icon>
-          <n-icon color="#ffd93b">
-            <Moon />
+          <n-icon size="12" color="#fff">
+            <MoonOutline />
           </n-icon>
         </template>
         <template #unchecked-icon>
@@ -37,7 +37,7 @@ const themeStore = useThemeStore();
   </n-layout>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .n-layout-header {
   padding: 16px;
 }
@@ -49,5 +49,14 @@ const themeStore = useThemeStore();
 strong {
   font-size: 18px;
   line-height: 26px;
+}
+
+.theme-switch.n-switch--active {
+  :deep(.n-switch__rail) {
+    background-color: #2f2f2f;
+  }
+  :deep(.n-switch__button) {
+    background-color: var(--n-color);
+  }
 }
 </style>
