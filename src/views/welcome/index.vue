@@ -1,14 +1,36 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import { NLayout, NLayoutHeader, NLayoutContent, NCard, NSpace } from "naive-ui";
+import { Moon, SunnySharp } from "@vicons/ionicons5";
+import { useThemeStore } from "@/store/app";
+
+const router = useRouter();
+const themeStore = useThemeStore();
 </script>
 
 <template>
   <n-layout :native-scrollbar="false" style="height: 100%" embedded>
-    <n-layout-header>暗色</n-layout-header>
+    <n-layout-header>
+      <n-switch v-model:value="themeStore.darkTheme">
+        <template #checked-icon>
+          <n-icon color="#ffd93b">
+            <Moon />
+          </n-icon>
+        </template>
+        <template #unchecked-icon>
+          <n-icon>
+            <SunnySharp />
+          </n-icon>
+        </template>
+      </n-switch>
+    </n-layout-header>
     <n-layout-content content-style="padding: 24px;">
       <n-space justify="center" align="center">
         <n-card class="card">
-          <strong>Hi, Welcome to ChatGPT Simulator!</strong>
+          <strong>Hi，欢迎使用 ChatGPT 模拟器!</strong>
+          <template #action
+            ><n-button type="primary" @click="router.push('/chat')"> To Chat </n-button>
+          </template>
         </n-card>
       </n-space>
     </n-layout-content>

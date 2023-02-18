@@ -1,3 +1,4 @@
+import type { App } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 import BaseLayout from "@/layout/base/index.vue";
@@ -32,5 +33,9 @@ const router = createRouter({
     },
   ],
 });
+
+export function setupRouter(app: App) {
+  app.use(router);
+}
 
 export default router;
