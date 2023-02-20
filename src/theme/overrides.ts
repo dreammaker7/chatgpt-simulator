@@ -7,8 +7,6 @@ export const overrides: GlobalThemeOverrides = {
     primaryColorPressed: "#006d75FF",
     primaryColorSuppl: "#36cfc9FF",
     borderRadius: "8px",
-    borderRadiusSmall: "4px",
-    fontWeight: "normal",
-    fontWeightStrong: "600"
+    borderRadiusSmall: "4px"
   }
 }
