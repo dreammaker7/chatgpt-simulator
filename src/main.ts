@@ -7,6 +7,8 @@ import { setupNaive } from "./plugins";
 import { setupStore } from "./store";
 
 import "./app.css";
+// Inter 字体
+import 'vfonts/Inter.css'
 
 const app = createApp(App);
 const pinia = createPinia()

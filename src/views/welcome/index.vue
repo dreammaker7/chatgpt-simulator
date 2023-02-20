@@ -28,8 +28,14 @@ const themeStore = useThemeStore();
     <n-layout-content>
       <n-space justify="center" align="center" vertical>
         <n-card :bordered="false" embedded> <strong>A ChatGPT Simulator</strong></n-card>
-        <n-button type="primary" size="large" strong @click="router.push('/chat')">
-          开始
+        <n-button
+          type="primary"
+          size="large"
+          icon-placement="right"
+          strong
+          @click="router.push('/chat')"
+        >
+          Start
           <template #icon>
             <n-icon>
               <AngleRight />
