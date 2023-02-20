@@ -13,7 +13,7 @@ const themeStore = useThemeStore();
     <n-layout-header>
       <n-switch v-model:value="themeStore.darkTheme" class="theme-switch">
         <template #checked-icon>
-          <n-icon size="12" color="#fff">
+          <n-icon color="#fff">
             <MoonOutline />
           </n-icon>
         </template>
