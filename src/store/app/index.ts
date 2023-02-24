@@ -1,11 +1,11 @@
-import { computed, ref } from 'vue'
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
+import { computed, ref } from 'vue';
 
 export const useThemeStore = defineStore('theme', () => {
-  const darkTheme = ref(false)
+  const darkTheme = ref(false);
 
   // 是否暗黑主题
-  const isDarkTheme = computed(() => darkTheme.value)
+  const isDarkTheme = computed(() => darkTheme.value);
 
-  return { darkTheme, isDarkTheme }
-})
+  return { darkTheme, isDarkTheme };
+});

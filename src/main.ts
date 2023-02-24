@@ -1,17 +1,17 @@
-import { createApp } from "vue";
-import { createPinia } from 'pinia'
-
-import App from "./App.vue";
-import router, { setupRouter } from "./router";
-import { setupNaive } from "./plugins";
-import { setupStore } from "./store";
-
-import "./app.css";
+import './app.css';
 // Inter 字体
-import 'vfonts/Inter.css'
+import 'vfonts/Inter.css';
+
+import { createPinia } from 'pinia';
+import { createApp } from 'vue';
+
+import App from './App.vue';
+import { setupNaive } from './plugins';
+import router, { setupRouter } from './router';
+import { setupStore } from './store';
 
 const app = createApp(App);
-const pinia = createPinia()
+const pinia = createPinia();
 
 app.use(router);
 app.use(pinia);

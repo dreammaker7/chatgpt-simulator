@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { useRouter } from "vue-router";
-import { NLayout, NLayoutHeader, NLayoutContent } from "naive-ui";
-import { MoonOutline, SunnySharp } from "@vicons/ionicons5";
-import { AngleRight } from "@vicons/fa";
-import { useThemeStore } from "@/store/app";
+  import { AngleRight } from '@vicons/fa';
+  import { MoonOutline, SunnySharp } from '@vicons/ionicons5';
+  import { NLayout, NLayoutContent, NLayoutHeader } from 'naive-ui';
+  import { useRouter } from 'vue-router';
 
-const router = useRouter();
-const themeStore = useThemeStore();
+  import { useThemeStore } from '@/store/app';
+
+  const router = useRouter();
+  const themeStore = useThemeStore();
 </script>
 
 <template>
@@ -28,13 +29,7 @@ const themeStore = useThemeStore();
     <n-layout-content>
       <n-space justify="center" align="center" vertical>
         <n-card :bordered="false" embedded> <strong>A ChatGPT Simulator</strong></n-card>
-        <n-button
-          type="primary"
-          size="large"
-          icon-placement="right"
-          strong
-          @click="router.push('/chat')"
-        >
+        <n-button type="primary" size="large" icon-placement="right" strong @click="router.push('/chat')">
           Start
           <template #icon>
             <n-icon>
@@ -48,42 +43,42 @@ const themeStore = useThemeStore();
 </template>
 
 <style lang="less" scoped>
-.n-layout-header {
-  padding: 24px;
-  background-color: transparent;
-  display: flex;
-  justify-content: flex-end;
+  .n-layout-header {
+    padding: 24px;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
 
-  .theme-switch.n-switch--active {
-    :deep(.n-switch__rail) {
-      background-color: #2f2f2f;
+    .theme-switch.n-switch--active {
+      :deep(.n-switch__rail) {
+        background-color: #2f2f2f;
+      }
+      :deep(.n-switch__button) {
+        background-color: var(--n-color);
+      }
     }
-    :deep(.n-switch__button) {
-      background-color: var(--n-color);
+  }
+
+  .n-space {
+    min-height: 50vh;
+    .n-card {
+      margin-block-end: 40px;
+    }
+    .n-button {
+      width: 200px;
+    }
+
+    strong {
+      font-size: 64px;
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      max-width: 960px;
+      margin: 0 auto 50px;
+      background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
-}
-
-.n-space {
-  min-height: 50vh;
-  .n-card {
-    margin-block-end: 40px;
-  }
-  .n-button {
-    width: 200px;
-  }
-
-  strong {
-    font-size: 64px;
-    line-height: 1.25;
-    font-weight: 900;
-    letter-spacing: -1.5px;
-    max-width: 960px;
-    margin: 0 auto 50px;
-    background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
 </style>

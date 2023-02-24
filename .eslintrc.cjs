@@ -1,5 +1,5 @@
 /* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
@@ -8,11 +8,13 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'eslint:recommended',
     '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier',
+    '@vue/eslint-config-prettier'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
+    sourceType: 'module'
   },
+  plugins: ['simple-import-sort'],
   rules: {
     'vue/script-setup-uses-vars': 'error',
     'vue/multi-word-component-names': 'off',
@@ -32,15 +34,15 @@ module.exports = {
       'error',
       {
         argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
-      },
+        varsIgnorePattern: '^_'
+      }
     ],
     'no-unused-vars': [
       'error',
       {
         argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
-      },
+        varsIgnorePattern: '^_'
+      }
     ],
     'space-before-function-paren': 'off',
     'vue/attributes-order': 'off',
@@ -57,11 +59,13 @@ module.exports = {
         html: {
           void: 'always',
           normal: 'never',
-          component: 'always',
+          component: 'always'
         },
         svg: 'always',
-        math: 'always',
-      },
+        math: 'always'
+      }
     ],
-  },
-}
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error'
+  }
+};

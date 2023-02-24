@@ -1,1 +1,1 @@
-export * from './overrides'
+export * from './overrides';

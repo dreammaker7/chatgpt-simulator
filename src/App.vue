@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { NConfigProvider, NGlobalStyle, darkTheme, lightTheme } from "naive-ui";
-import { useThemeStore } from "@/store/app";
-import { computed } from "vue";
-import { overrides } from "@/theme";
+  import { darkTheme, lightTheme, NConfigProvider, NGlobalStyle } from 'naive-ui';
+  import { computed } from 'vue';
 
-const themeStroe = useThemeStore();
+  import { useThemeStore } from '@/store/app';
+  import { overrides } from '@/theme';
 
-const SYSTEM_THEME = computed(() => (themeStroe.darkTheme ? darkTheme : lightTheme));
+  const themeStroe = useThemeStore();
+
+  const SYSTEM_THEME = computed(() => (themeStroe.darkTheme ? darkTheme : lightTheme));
 </script>
 
 <template>

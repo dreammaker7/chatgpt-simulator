@@ -1,37 +1,37 @@
-import type { App } from "vue";
-import { createRouter, createWebHistory } from "vue-router";
+import type { App } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
 
-import BaseLayout from "@/layout/base/index.vue";
+import BaseLayout from '@/layout/base/index.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/",
-      redirect: "/welcome",
+      path: '/',
+      redirect: '/welcome'
     },
     {
-      path: "/welcome",
-      component: () => import("@/views/welcome/index.vue"),
+      path: '/welcome',
+      component: () => import('@/views/welcome/index.vue'),
       meta: {
-        title: "Welcome to use ChatGPT Simulator",
-      },
+        title: 'Welcome to use ChatGPT Simulator'
+      }
     },
     {
-      path: "/chat",
+      path: '/chat',
       component: BaseLayout,
       children: [
         {
-          path: "index",
-          name: "Chat",
-          component: () => import("@/views/chat/index.vue"),
+          path: 'index',
+          name: 'Chat',
+          component: () => import('@/views/chat/index.vue'),
           meta: {
-            title: "Welcome to use ChatGPT Simulator",
-          },
-        },
-      ],
-    },
-  ],
+            title: 'Welcome to use ChatGPT Simulator'
+          }
+        }
+      ]
+    }
+  ]
 });
 
 export function setupRouter(app: App) {
