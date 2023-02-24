@@ -1,6 +1,7 @@
 import './app.css';
 // Inter 字体
 import 'vfonts/Inter.css';
+import 'virtual:svg-icons-register';
 
 import { createPinia } from 'pinia';
 import { createApp } from 'vue';
