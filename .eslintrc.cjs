@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['simple-import-sort'],
+  plugins: ['simple-import-sort', 'import', '@typescript-eslint'],
   rules: {
     'vue/script-setup-uses-vars': 'error',
     'vue/multi-word-component-names': 'off',
@@ -66,6 +66,7 @@ module.exports = {
       }
     ],
     'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error'
+    'simple-import-sort/exports': 'error',
+    'import/no-duplicates': 'error'
   }
 };
