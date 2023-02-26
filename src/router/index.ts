@@ -1,16 +1,13 @@
 import type { App } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
-import BaseLayout from '@/layout/base/index.vue';
+import BaseLayout from '@/layout/BaseLayout.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      redirect: '/welcome'
-    },
-    {
+      alias: '/',
       path: '/welcome',
       component: () => import('@/views/welcome/index.vue'),
       meta: {
