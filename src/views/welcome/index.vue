@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { AngleRight } from '@vicons/fa';
   import { MoonOutline, SunnySharp } from '@vicons/ionicons5';
-  import { NLayout, NLayoutContent, NLayoutHeader, NSwitch } from 'naive-ui';
+  import { NH2, NLayout, NLayoutContent, NLayoutHeader, NP, NSwitch } from 'naive-ui';
   import { useRouter } from 'vue-router';
 
   import SvgIcon from '@/components/SvgIcon/index.vue';
@@ -32,7 +32,10 @@
         <n-space justify="center" align="center" class="animate-block">
           <svg-icon style="font-size: 80px" name="chatgpt" :spin="{ duration: 12 }" />
         </n-space>
-        <n-card :bordered="false" embedded> <strong>A ChatGPT Simulator</strong></n-card>
+        <n-card embedded>
+          <n-h2>A ChatGPT Simulator</n-h2>
+          <n-p> 涵盖全部 ChatGPT 的 API 使用案例，键入你的 Open AI Key，让我们现在开始吧！</n-p>
+        </n-card>
         <n-button type="primary" size="large" icon-placement="right" strong @click="router.push('/chat')">
           Start
           <template #icon>
@@ -65,27 +68,28 @@
   }
 
   .content {
+    text-align: center;
     min-height: 80vh;
 
-    .n-card {
-      margin-block-end: 40px;
-    }
-
-    .n-button {
-      width: 200px;
-    }
-
-    strong {
-      font-size: 64px;
+    .n-h2 {
+      font-size: 54px;
       line-height: 1.25;
       font-weight: 900;
       letter-spacing: -1.5px;
       max-width: 960px;
-      margin: 0 auto 50px;
       background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    .n-p {
+      font-size: 16px;
+    }
+
+    .n-button {
+      margin-top: 40px;
+      width: 200px;
     }
   }
 
