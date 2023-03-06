@@ -17,7 +17,7 @@ specifiers:
   less-loader: ^11.1.0
   lint-staged: ^13.1.2
   naive-ui: ^2.34.3
-  openai: ^3.1.0
+  openai: ^3.2.1
   pinia: ^2.0.30
   prettier: ^2.8.4
   typescript: ^4.9.3
@@ -29,7 +29,7 @@ specifiers:
   vue-tsc: ^1.0.24
 
 dependencies:
-  openai: 3.1.0
+  openai: 3.2.1
   pinia: 2.0.30_hmuptsblhheur2tugfgucj7gc4
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
@@ -2949,8 +2949,8 @@ packages:
       mimic-fn: 4.0.0
     dev: true
 
-  /openai/3.1.0:
-    resolution: {integrity: sha512-v5kKFH5o+8ld+t0arudj833Mgm3GcgBnbyN9946bj6u7bvel4Yg6YFz2A4HLIYDzmMjIo0s6vSG9x73kOwvdCg==}
+  /openai/3.2.1:
+    resolution: {integrity: sha512-762C9BNlJPbjjlWZi4WYK9iM2tAVAv0uUp1UmI34vb0CN5T2mjB/qM6RYBmNKMh/dN9fC+bxqPwWJZUTWW052A==}
     dependencies:
       axios: 0.26.1
       form-data: 4.0.0

@@ -36,7 +36,7 @@
           <n-h2>A ChatGPT Simulator</n-h2>
           <n-p> 涵盖全部 ChatGPT 的 API 使用案例，键入你的 Open AI Key，让我们现在开始吧！</n-p>
         </n-card>
-        <n-button type="primary" size="large" icon-placement="right" strong @click="router.push('/chat')">
+        <n-button type="primary" size="large" icon-placement="right" strong @click="router.push('/chat/index')">
           Start
           <template #icon>
             <n-icon>
